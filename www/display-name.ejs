@@ -10,8 +10,12 @@
   <body>
     <div id="content">
       <h1>OAuth Integration example for Cisco Spark (EJS template)</h1>
-      <p>So happy to meet, <%= displayName %> !</p>
+      <p>Here are your rooms:</p>
+      <ul>
+        <% rooms.forEach(function(room) { %>
+            <li><%= room.title %>: <%= room.id %></li>
+        <% }); %>
+     </ul>
     </div>
   </body>
 </html>
-
